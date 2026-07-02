@@ -1,132 +1,284 @@
-# ⚡ Fastfetch Windows Developer Configuration
+<div align="center">
 
-> A clean, modern, and minimal **Fastfetch** configuration for Windows inspired by **HyDE Linux**, **Powerlevel10k**, and modern developer workstations.
+# ⚡ Windows Developer Terminal Setup
 
----
+A modern Windows terminal configuration inspired by **HyDE Linux**, **Powerlevel10k**, and **modern developer environments**.
 
-## ✨ Features
+Designed for developers who want a clean, beautiful, and productive PowerShell experience.
 
-- 🪟 Beautiful Windows ASCII logo
-- 🎨 Catppuccin-inspired colors
-- ⚡ Clean and minimal layout
-- 💻 Developer-oriented information
-- 📦 Node.js version
-- 🥟 Bun version
-- 🐳 Docker version
--  Neovim version
-- 🌿 Git version
-- ⚡ Fastfetch version
-- 🖥️ System information
-- 🧠 Memory usage
-- 🔋 Battery status
-- 🖥️ Display resolution
-- ⏱️ System uptime
+<br>
+
+![Windows](https://img.shields.io/badge/Windows-11-0078D6?style=for-the-badge&logo=windows)
+![PowerShell](https://img.shields.io/badge/PowerShell-7-blue?style=for-the-badge&logo=powershell)
+![Fastfetch](https://img.shields.io/badge/Fastfetch-Latest-success?style=for-the-badge)
+![Oh My Posh](https://img.shields.io/badge/Oh%20My%20Posh-Latest-orange?style=for-the-badge)
+![MIT License](https://img.shields.io/github/license/restuusgh/config-powershell?style=for-the-badge)
+
+</div>
 
 ---
 
-## 📸 Preview
+# 📖 Overview
 
-![Fastfetch](screenshots/preview.png)
+This repository contains my personal Windows terminal configuration.
+
+It includes everything needed to transform a fresh Windows installation into a modern Linux-like developer terminal.
+
+The goal is to provide a clean, fast, and highly customizable PowerShell environment for Windows developers.
 
 ---
 
-# 🚀 Requirements
+# ✨ Features
 
-Install the latest version of Fastfetch.
+- 🪟 Modern Windows PowerShell setup
+- ⚡ PowerShell 7 configuration
+- 🎨 Oh My Posh custom theme
+- 📦 Fastfetch custom configuration
+- 📁 Terminal Icons
+- 🚀 Eza integration
+- 🌳 Tree view aliases
+- 🎯 Git integration
+- 🐳 Docker detection
+- 🥟 Bun detection
+-  Neovim detection
+- 🟢 Node.js detection
+- 🌿 Beautiful developer prompt
+- 🎨 Nerd Font support
 
-### Windows
+---
 
-```powershell
-winget install fastfetch
+# 📸 Preview
+
+## PowerShell
+
+![PowerShell](./screenshots/preview.png)
+
+---
+
+## Fastfetch
+
+![Fastfetch](./screenshots/preview.png)
+
+---
+
+# 📂 Repository Structure
+
+```
+.config
+├── fastfetch/
+│   └── config.jsonc
+│
+├── ohmyposh/
+│   └── restu.omp.json
+│
+├── powershell/
+│   └── Microsoft.PowerShell_profile.ps1
+│
+├── Modules/
+│   └── Terminal-Icons/
+│
+screenshots/
+│
+README.md
+LICENSE
 ```
 
-or
+---
+
+# 📦 Included Configurations
+
+## ⚡ PowerShell
+
+- PowerShell 7
+- PSReadLine
+- Custom aliases
+- Better command history
+- Auto suggestions
+- Modern prompt
+
+---
+
+## 🎨 Oh My Posh
+
+Custom Powerlevel10k inspired theme.
+
+Features
+
+- Git Status
+- Current Path
+- Execution Status
+- Time
+- Programming Languages
+- Modern Powerline Prompt
+
+---
+
+## 📦 Fastfetch
+
+Custom Fastfetch layout inspired by HyDE Linux.
+
+Displays
+
+- Operating System
+- Kernel
+- Shell
+- CPU
+- GPU
+- Memory
+- Disk
+- Display
+- Battery
+- Uptime
+
+Developer tools
+
+- Node.js
+- Git
+- Docker
+- Bun
+- Neovim
+- Fastfetch
+
+---
+
+## 📁 Terminal Icons
+
+Adds beautiful Nerd Font icons to
+
+- Files
+- Folders
+- Git repositories
+- File types
+
+---
+
+# 🚀 Installation
+
+## 1. Install PowerShell 7
 
 ```powershell
-scoop install fastfetch
+winget install Microsoft.PowerShell
 ```
 
 ---
 
-# 📦 Optional Software
+## 2. Install Oh My Posh
 
-This configuration displays versions of the following tools.
+```powershell
+winget install JanDeDobbeleer.OhMyPosh
+```
+
+---
+
+## 3. Install Fastfetch
+
+```powershell
+winget install Fastfetch-cli.Fastfetch
+```
+
+---
+
+## 4. Install Terminal Icons
+
+```powershell
+Install-Module Terminal-Icons -Repository PSGallery
+```
+
+---
+
+## 5. Install Eza
+
+```powershell
+winget install eza-community.eza
+```
+
+---
+
+## 6. Install Nerd Font
+
+Recommended
+
+- CaskaydiaCove Nerd Font
+- JetBrainsMono Nerd Font
+- MesloLGS Nerd Font
+
+---
+
+# 📋 Optional Software
+
+These tools are automatically detected by Fastfetch.
 
 | Software | Required |
 |----------|----------|
-| PowerShell 7 | ✅ |
 | Git | ✅ |
-| Node.js | ✅ |
-| Docker Desktop | Optional |
+| Node.js | Optional |
 | Bun | Optional |
+| Docker Desktop | Optional |
 | Neovim | Optional |
+| Fastfetch | Optional |
 
 ---
 
-# 📥 Installation
+# ⚙️ Applying Configuration
 
-Clone this repository.
+Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/restuusgh/config-powershell.git
 ```
 
-Copy the configuration.
+Copy the files
 
 ```powershell
-mkdir "$HOME\.config\fastfetch" -Force
-Copy-Item .\config.jsonc "$HOME\.config\fastfetch\" -Force
+Copy-Item .config\fastfetch "$HOME\.config\" -Recurse -Force
+
+Copy-Item .config\ohmyposh "$HOME\.config\" -Recurse -Force
+
+Copy-Item .config\powershell\Microsoft.PowerShell_profile.ps1 `
+"$HOME\Documents\PowerShell\" `
+-Force
 ```
 
-Run
-
-```powershell
-fastfetch
-```
+Restart PowerShell.
 
 ---
 
-# 📂 Configuration Location
+# 🖥 Requirements
 
-Windows
-
-```
-C:\Users\<username>\.config\fastfetch\
-```
-
-or
-
-```
-%USERPROFILE%\.config\fastfetch\
-```
+- Windows 11
+- Windows Terminal
+- PowerShell 7
+- Nerd Font
 
 ---
 
-# 🛠 Developer Section
+# 🎯 Recommended Applications
 
-The DEV section automatically detects installed software.
-
-| Software | Detection |
-|----------|-----------|
-| Node.js | `node -v` |
-| Git | `git --version` |
-| Docker | `docker --version` |
-| Neovim | `nvim --version` |
-| Bun | `bun --version` |
-| Fastfetch | `fastfetch --version` |
-
-If one of these programs is not installed, it will simply not be displayed.
+- Visual Studio Code
+- Git
+- Docker Desktop
+- Bun
+- Node.js
+- Neovim
+- Windows Terminal
 
 ---
 
-# 🎨 Theme
-
-Inspired by
+# 🎨 Inspired By
 
 - HyDE Linux
 - Powerlevel10k
 - Catppuccin
-- Modern Windows Developer Workstation
+- Windows Terminal
+- Oh My Posh
+
+---
+
+# ❤️ Contributing
+
+Feel free to fork this repository and customize it to fit your own workflow.
+
+Pull requests are welcome.
 
 ---
 
@@ -134,4 +286,12 @@ Inspired by
 
 MIT License
 
-Feel free to modify and share.
+---
+
+<div align="center">
+
+Made with ❤️ by **Restu Singgih**
+
+If you like this project, don't forget to ⭐ the repository.
+
+</div>
