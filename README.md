@@ -2,8 +2,6 @@
 
 > A clean, modern, and minimal **Fastfetch** configuration for Windows inspired by **HyDE Linux**, **Powerlevel10k**, and modern developer workstations.
 
-![Fastfetch](preview.png)
-
 ---
 
 ## ✨ Features
@@ -28,33 +26,7 @@
 
 ## 📸 Preview
 
-```text
-        ,.=:!!t3Z3z.,
-       :tt:::tt333EE3
-       Et:::ztt33EEEL @Ee.,      ..
-
- OS
-│ ├ Windows 11 Pro
-│ ├ Build 25H2
-│ └ PowerShell 7
-
-󰌢 SYSTEM
-│ ├ Intel Core i7
-│ ├ Intel Graphics
-│ ├ NVIDIA GTX
-│ ├ Memory
-│ ├ Display
-│ ├ Battery
-│ └ Uptime
-
-󰜏 DEV
-│ ├ Node.js
-│ ├ Git
-│ ├ Docker
-│ ├ Neovim
-│ ├ Bun
-│ └ Fastfetch
-```
+![Fastfetch](screenshots/preview.png)
 
 ---
 
