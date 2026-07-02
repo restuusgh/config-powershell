@@ -51,7 +51,7 @@ The goal is to provide a clean, fast, and highly customizable PowerShell environ
 
 ## PowerShell
 
-![PowerShell](./screenshots/preview.png)
+![PowerShell](./screenshots/preview2.png)
 
 ---
 
